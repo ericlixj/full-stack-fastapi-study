@@ -11,4 +11,10 @@ export default defineConfig({
     },
   },
   plugins: [react(), TanStackRouterVite()],
+  server: {
+    watch: {
+      usePolling: true,
+      interval: 100, // 轮询间隔（毫秒）
+    }
+  },
 })
